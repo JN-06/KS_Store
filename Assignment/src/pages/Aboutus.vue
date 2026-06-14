@@ -263,7 +263,7 @@ export default {
       <div class="news-list" v-else>
         <div class="news-card" v-for="n in publishedNews" :key="n._id">
           <div class="news-image">
-            <img :src="n.image ? `${import.meta.env.VITE_API_URL}/${n.image}` : ''" />
+            <img :src="n.image ? 'https://ks-store.onrender.com/' + n.image : ''" />
           </div>
 
           <div class="news-content">

@@ -77,7 +77,7 @@ export default {
 
       if (!src.startsWith("/")) src = "/" + src;
 
-      return `http://localhost:5000${src}`;
+      return `https://ks-store.onrender.com${src}`;
     },
 
     selectVariant(key) {

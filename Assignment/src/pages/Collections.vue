@@ -51,7 +51,7 @@ loading: false,
         img = "/" + img;
       }
 
-      return `http://localhost:5000${img}`;
+      return `https://ks-store.onrender.com${img}`;
     }
   },
 

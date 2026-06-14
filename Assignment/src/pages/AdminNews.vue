@@ -74,7 +74,7 @@ export default {
     getImage(img) {
       if (!img) return "";
       if (typeof img === "string" && img.startsWith("http")) return img;
-      return `http://localhost:5000/${img}`;
+      return `https://ks-store.onrender.com/${img}`;
     },
 
 

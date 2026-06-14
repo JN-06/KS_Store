@@ -23,14 +23,14 @@ export default {
     getImage(path) {
       if (!path) return "";
       if (path.startsWith("http")) return path;
-      return `http://localhost:5000/${path}`;
+      return `https://ks-store.onrender.com/${path}`;
     },
 
     async fetchOrders() {
       try {
         this.loading = true;
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/orders", {
+        const res = await axios.get("https://ks-store.onrender.com/api/orders", {
           headers: { Authorization: `Bearer ${token}` }
         });
         this.orders =
@@ -51,7 +51,7 @@ export default {
         this.detailLoading = true;
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          `http://localhost:5000/api/orders/${id}`,
+          `https://ks-store.onrender.com/api/orders/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const data =
@@ -81,7 +81,7 @@ export default {
         }
         const token = localStorage.getItem("token");
         const res = await axios.put(
-          `http://localhost:5000/api/orders/${this.selectedOrder._id}/status`,
+          `https://ks-store.onrender.com/api/orders/${this.selectedOrder._id}/status`,
           {
             paymentStatus: status
           },
@@ -108,7 +108,7 @@ export default {
         }
         const token = localStorage.getItem("token");
         const res = await axios.put(
-          `http://localhost:5000/api/orders/${this.selectedOrder._id}/status`,
+          `https://ks-store.onrender.com/api/orders/${this.selectedOrder._id}/status`,
           {
             paymentStatus: "cancelled",
             cancelReason: this.cancelReason

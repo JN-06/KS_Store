@@ -96,7 +96,7 @@ export default {
       if (!src) return ""
       if (src.startsWith("http")) return src
       if (!src.startsWith("/")) src = "/" + src
-      return `http://localhost:5000${src}`
+      return `https://ks-store.onrender.com${src}`
     },
 
     formatDate(date) {

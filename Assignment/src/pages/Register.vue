@@ -15,7 +15,7 @@ export default {
   methods: {
     async register() {
       try {
-        const res = await axios.post("http://localhost:5000/api/auth/register", {
+        const res = await axios.post("https://ks-store.onrender.com/api/auth/register", {
           name: this.name,
           email: this.email,
           password: this.password

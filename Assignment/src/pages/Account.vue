@@ -1,6 +1,6 @@
 <script>
 import axios from "axios"
-const API = "http://localhost:5000/api"
+const API = "https://ks-store.onrender.com/api"
 export default {
   data() {
     return {
@@ -62,7 +62,7 @@ export default {
   try {
     const token = localStorage.getItem("token")
 
-    const res = await fetch("http://localhost:5000/api/users/profile", {
+    const res = await fetch("https://ks-store.onrender.com/api/users/profile", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -129,7 +129,7 @@ export default {
         if (this.newImageFile) {
           const formData = new FormData()
           formData.append("profile", this.newImageFile)
-          const uploadRes = await fetch("http://localhost:5000/api/users/upload-profile", {
+          const uploadRes = await fetch("https://ks-store.onrender.com/api/users/upload-profile", {
             method: "POST",
             headers: { Authorization: `Bearer ${token}` },
             body: formData
@@ -139,7 +139,7 @@ export default {
           profileUrl = uploadData.url
         }
 
-        const res = await fetch("http://localhost:5000/api/users/profile", {
+        const res = await fetch("https://ks-store.onrender.com/api/users/profile", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -168,7 +168,7 @@ export default {
         this.ordersError = null
 
         const token = localStorage.getItem("token")
-        const res = await axios.get("http://localhost:5000/api/orders/my", {
+        const res = await axios.get("https://ks-store.onrender.com/api/orders/my", {
           headers: { Authorization: `Bearer ${token}` }
         })
 

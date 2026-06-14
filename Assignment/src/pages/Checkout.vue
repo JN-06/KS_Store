@@ -46,7 +46,7 @@ export default {
       if (!src) return "";
       if (src.startsWith("http") || src.startsWith("blob:")) return src;
       if (!src.startsWith("/")) src = "/" + src;
-      return `http://localhost:5000${src}`;
+      return `https://ks-store.onrender.com${src}`;
     },
 
     loadCheckoutItems() {
@@ -230,7 +230,7 @@ export default {
           formData.append("paymentProof", this.paymentFile);
         }
 
-        const res = await fetch("http://localhost:5000/api/orders", {
+        const res = await fetch("https://ks-store.onrender.com/api/orders", {
           method: "POST",
           headers: { Authorization: `Bearer ${token}` },
           body: formData
