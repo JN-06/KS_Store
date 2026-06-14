@@ -2,7 +2,7 @@ import Product from "../models/Product.js";
 
 const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://YOUR-BACKEND.onrender.com"
+    ? "https://ks-store.onrender.com"
     : "http://localhost:5000";
 
 const fixImages = (arr) =>

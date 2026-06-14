@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://ks-store-backend.onrender.com/api"
+  baseURL: "https://ks-store.onrender.com"
 });
 
 API.interceptors.request.use((config) => {
